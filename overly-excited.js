@@ -11,11 +11,13 @@ function addExcitement(theWordArray) {
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
     let counter = 1
+    let moreBangs = ""
     for (let i = 0; i < theWordArray.length; i++) {
         
         if (counter !== 0 && counter % 3 === 0){
+            moreBangs += `!`
             //if divisible by 3, add a !
-            buildMeUp += ` ${sentence[i]}!`
+            buildMeUp += ` ${sentence[i]}${moreBangs}`
         }
         else {
             // Concatenate the new word onto buildMeUp
