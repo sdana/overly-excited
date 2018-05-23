@@ -1,5 +1,6 @@
 // Create an array that contains the words in the sentence
 let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
+let newSentence = ["this", "was", "a", "very", "interesting", "and", "fun", "challenge"];
 
 /*
     The addExcitement function should be an impure function, and accept
@@ -17,11 +18,11 @@ function addExcitement(theWordArray, theCharacter) {
         if (counter !== 0 && counter % 3 === 0){
             moreBangs += `${theCharacter}`
             //if divisible by 3, add a !
-            buildMeUp += ` ${sentence[i]}${moreBangs}`
+            buildMeUp += ` ${theWordArray[i]}${moreBangs}`
         }
         else {
             // Concatenate the new word onto buildMeUp
-            buildMeUp += ` ${sentence[i]}`
+            buildMeUp += ` ${theWordArray[i]}`
         }
         // Print buildMeUp to the console
         console.log(buildMeUp)
@@ -33,3 +34,4 @@ function addExcitement(theWordArray, theCharacter) {
 
 // Invoke the function and pass in the array
 addExcitement(sentence, "$")
+addExcitement(newSentence, "*")
