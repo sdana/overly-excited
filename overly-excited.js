@@ -6,7 +6,7 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, theCharacter) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -15,7 +15,7 @@ function addExcitement(theWordArray) {
     for (let i = 0; i < theWordArray.length; i++) {
         
         if (counter !== 0 && counter % 3 === 0){
-            moreBangs += `!`
+            moreBangs += `${theCharacter}`
             //if divisible by 3, add a !
             buildMeUp += ` ${sentence[i]}${moreBangs}`
         }
@@ -32,4 +32,4 @@ function addExcitement(theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence)
+addExcitement(sentence, "$")
